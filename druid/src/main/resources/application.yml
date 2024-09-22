@@ -1,0 +1,64 @@
+spring:
+  datasource:
+    # driver-class-name 非必填可根据url推断
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    # 只有下面三个是必填项（使用内嵌数据库的话这三个也可以不用填，会使用默认配置），其他配置不是必须的
+    url: jdbc:mysql://127.0.0.1:3306/demo?useUnicode=true&characterEncoding=utf-8&autoReconnect=true&useSSL=false&serverTimezone=Asia/Shanghai
+    username: root
+    password: I6LsOdIbnlLxBLV5Dw0+zr9OE0u/oMKh1w2i2yrPFXHMjDwp1qpXZB4up3ZvJt/QCPrHcHcIJ37hEOuEo7OadA==
+    druid: # druid连接池
+      initial-size: 2 # 初始化大小
+      max-active: 30 # 最大连接池数量
+      min-idle: 2 # 最小连接池数量
+      max-wait: 1234 # 连接时最大等待时间（单位：毫秒）
+      pool-prepared-statements: true # 是否缓存 PreparedStatement，默认为 false
+      max-pool-prepared-statement-per-connection-size: 5
+      # max-open-prepared-statements: #等价于上面的max-pool-prepared-statement-per-connection-size
+      validation-query: select 1 # 配置测试连接是否可用的查询 sql
+      validation-query-timeout: 1
+      test-on-borrow: true # 连接从连接池获取时是否测试连接的可用性
+      test-on-return: true # 连接返回连接池时是否测试连接的可用性。
+      test-while-idle: true # 连接空闲时是否执行检查。
+      time-between-eviction-runs-millis: 10000 # 配置多久进行一次检测，检测需要关闭的连接，单位是毫秒。
+      min-evictable-idle-time-millis: 30001 # 一个连接在连接池中最小生存的时间，单位是毫秒。
+      async-close-connection-enable: true
+      # 监控配置
+      # WebStatFilter配置，说明请参考Druid Wiki，配置_配置WebStatFilter
+      # https://github.com/alibaba/druid/wiki/%E9%85%8D%E7%BD%AE_%E9%85%8D%E7%BD%AEWebStatFilter
+      web-stat-filter:
+        enabled: true # 启动 StatFilter
+        # url-pattern:  # 指定过滤url 例：/*   过滤所有url
+        # exclusions: # 排除一些不必要的url 例："*.gif,*.jpg,*.png"
+        session-stat-enable: # 开启session统计功能
+        session-stat-max-count: # session的最大个数,默认100
+        principal-session-name: # Druid获取当前的session中存储的用户信息
+        principal-cookie-name:  # Druid获取当前的cookie中存储的用户信息
+        profile-enable: # 打开能够监控单个url调用的sql列表
+      # StatViewServlet配置，说明请参考Druid Wiki，配置_StatViewServlet配置
+      # https://github.com/alibaba/druid/wiki/%E9%85%8D%E7%BD%AE_StatViewServlet%E9%85%8D%E7%BD%AE
+      stat-view-servlet:
+        enabled: true #是否启用StatViewServlet（监控页面）默认值为false（考虑到安全问题默认并未启动，如需启用建议设置密码或白名单以保障安全）
+        url-pattern: /druid/* # 配置监控后台访问路径
+        # reset-enable:
+        login-username: admin # 配置监控后台登录的用户名、密码
+        login-password: admin
+        # allow:
+        # deny:
+      # Spring监控配置，说明请参考Druid Github Wiki，配置_Druid和Spring关联监控配置
+      # aop-patterns: # Spring监控AOP切入点，如x.y.z.service.*,配置多个英文逗号分隔
+
+      # 配置StatFilter
+      filter:
+        stat:
+          enabled: true
+          # db-type:
+          log-slow-sql: true # 开启慢 sql 记录
+          slow-sql-millis: 2000 # 若执行耗时大于 2s，则视为慢 sql
+      # 配置WallFilter
+        wall:
+          enabled: true
+          # db-type:
+          config:
+            delete-allow: false
+            drop-table-allow: false
+      # 其他 Filter 配置可根据官方文档自动选择
