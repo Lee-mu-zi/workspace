@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="CodeInsightWorkspaceSettings">
-    <option name="optimizeImportsOnTheFly" value="true" />
-  </component>
   <component name="ExternalStorageConfigurationManager" enabled="true" />
   <component name="MavenProjectsManager">
     <option name="originalFiles">
@@ -15,16 +12,17 @@
         <option value="$PROJECT_DIR$/spring-xxl-job/pom.xml" />
         <option value="$PROJECT_DIR$/xxl-job/pom.xml" />
         <option value="$PROJECT_DIR$/Sentinel/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-sentinel/pom.xml" />
+        <option value="$PROJECT_DIR$/opnefeign-userservice/pom.xml" />
+        <option value="$PROJECT_DIR$/openfeign-consumer/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
       <set>
         <option value="$PROJECT_DIR$/Sentinel/pom.xml" />
+        <option value="$PROJECT_DIR$/openfeign-consumer/pom.xml" />
       </set>
     </option>
-    <option name="workspaceImportForciblyTurnedOn" value="true" />
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_17" default="true" project-jdk-name="17" project-jdk-type="JavaSDK">
-    <output url="file://$PROJECT_DIR$/out" />
-  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_17" default="true" project-jdk-name="17" project-jdk-type="JavaSDK" />
 </project>

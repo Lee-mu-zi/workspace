@@ -3,9 +3,9 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.leemuzi</groupId>
-    <artifactId>springcloudalibaba</artifactId>
+    <artifactId>spring-cloud-alibaba</artifactId>
     <version>${revision}</version>
-    <name>springcloudalibaba</name>
+    <name>spring-cloud-alibaba</name>
     <description>springcloudalibaba</description>
     <packaging>pom</packaging>
 
@@ -15,6 +15,12 @@
         <module>nacos-consumer</module>
         <module>spring-schedule</module>
         <module>spring-xxl-job</module>
+        <module>spring-sentinel</module>
+        <module>openfeign-userservice</module>
+        <module>openfeign-consumer-service</module>
+        <module>rocketmq-producer</module>
+        <module>rocketmq-consumer1</module>
+        <module>rocketmq-consumer2</module>
     </modules>
 
     <properties>
@@ -94,8 +100,8 @@
                 <artifactId>xxl-job-core</artifactId>
                 <version>2.4.1</version>
             </dependency>
-        </dependencies>
 
+        </dependencies>
 
     </dependencyManagement>
 

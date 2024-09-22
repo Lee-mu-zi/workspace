@@ -1,0 +1,10 @@
+server:
+  port: 8081
+spring:
+  application:
+    name: spring-sentinel-test
+  cloud:
+    sentinel:
+      transport:
+        port: 8719
+        dashboard: localhost:8080

@@ -8,16 +8,16 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.web.client.RestTemplate;
 
 @SpringBootApplication
-@EnableDiscoveryClient
+//@EnableDiscoveryClient
 public class NacosConsumerApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(NacosConsumerApplication.class, args);
     }
 
-    @Bean
-    @LoadBalanced
-    public RestTemplate restTemplate() {
-        return new RestTemplate();
-    }
+//    @Bean
+//    @LoadBalanced
+//    public RestTemplate restTemplate() {
+//        return new RestTemplate();
+//    }
 }
