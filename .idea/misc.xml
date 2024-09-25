@@ -16,6 +16,7 @@
         <option value="$PROJECT_DIR$/opnefeign-userservice/pom.xml" />
         <option value="$PROJECT_DIR$/openfeign-consumer/pom.xml" />
         <option value="$PROJECT_DIR$/druid/pom.xml" />
+        <option value="$PROJECT_DIR$/mybatis-plus/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">

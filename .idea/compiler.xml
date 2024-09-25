@@ -19,6 +19,7 @@
         <module name="nacos-config" />
         <module name="openfeign-userservice" />
         <module name="spring-schedule" />
+        <module name="mybatis-plus" />
         <module name="spring-xxl-job" />
         <module name="xxl-job-admin" />
       </profile>
