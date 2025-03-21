@@ -22,6 +22,7 @@
         <module>rocketmq-consumer1</module>
         <module>rocketmq-consumer2</module>
         <module>druid</module>
+        <module>thread-demo</module>
     </modules>
 
     <properties>
