@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--namespace 是MybatisMapper的位置-->
+<mapper namespace="com.leemuzi.mybatis.mapper.MybatisMapper">
+    <!--id是方法的名字-->
+    <select id="count" resultType="integer">
+        select count(1) from mybatis_user
+    </select>
+
+    <select id="getUser" parameterType="int" resultType="com.leemuzi.mybatis.domain.User">
+        select * from mybatis_user where id = #{id}
+    </select>
+
+</mapper>
