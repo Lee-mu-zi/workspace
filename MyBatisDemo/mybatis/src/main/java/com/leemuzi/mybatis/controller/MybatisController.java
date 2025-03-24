@@ -4,10 +4,7 @@ import com.leemuzi.mybatis.domain.User;
 import com.leemuzi.mybatis.service.MybatisService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * @Author 李Muzi
@@ -28,6 +25,11 @@ public class MybatisController {
     @GetMapping("/getUser")
     public User getUser(@RequestParam("id") int id) {
         return mybatisService.getUser(id);
+    }
+
+    @PostMapping("/createUser")
+    public boolean createUser(@RequestBody User user) {
+        return mybatisService.createUser(user);
     }
 
 }

@@ -3,8 +3,6 @@ package com.leemuzi.mybatis.mapper;
 import com.leemuzi.mybatis.domain.User;
 import org.apache.ibatis.annotations.Mapper;
 
-import java.util.HashMap;
-
 
 @Mapper
 public interface MybatisMapper {
@@ -13,4 +11,6 @@ public interface MybatisMapper {
 
     User getUser(int id);
 
+
+    boolean createUser(User user);
 }

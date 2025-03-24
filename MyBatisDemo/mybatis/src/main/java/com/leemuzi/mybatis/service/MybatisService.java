@@ -12,4 +12,6 @@ public interface MybatisService {
     int count();
 
     User getUser(int id);
+
+    boolean createUser(User user);
 }

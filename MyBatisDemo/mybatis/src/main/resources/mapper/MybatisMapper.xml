@@ -4,6 +4,10 @@
         "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <!--namespace 是MybatisMapper的位置-->
 <mapper namespace="com.leemuzi.mybatis.mapper.MybatisMapper">
+    <insert id="createUser">
+        insert into mybatis_user (name, age) values (#{user.name}, #{user.age})
+    </insert>
+
     <!--id是方法的名字-->
     <select id="count" resultType="integer">
         select count(1) from mybatis_user

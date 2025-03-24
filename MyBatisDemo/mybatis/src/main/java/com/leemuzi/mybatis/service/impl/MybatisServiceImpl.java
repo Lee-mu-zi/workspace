@@ -26,4 +26,11 @@ public class MybatisServiceImpl implements MybatisService {
     public User getUser(int id) {
         return mapper.getUser(id);
     }
+
+    @Override
+    public boolean createUser(User user) {
+        String name = user.getName();
+        int age = user.getAge();
+        return mapper.createUser(user);
+    }
 }
