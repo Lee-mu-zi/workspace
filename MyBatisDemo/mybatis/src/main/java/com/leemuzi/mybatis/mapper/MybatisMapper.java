@@ -2,6 +2,7 @@ package com.leemuzi.mybatis.mapper;
 
 import com.leemuzi.mybatis.domain.User;
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
 
 
 @Mapper
@@ -11,6 +12,5 @@ public interface MybatisMapper {
 
     User getUser(int id);
 
-
-    boolean createUser(User user);
+    boolean createUser(@Param("users") User user);
 }

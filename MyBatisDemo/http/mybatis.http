@@ -1,8 +1,11 @@
-POST http://localhost:80/api/item
-Content-Type: application/x-www-form-urlencoded
+###
+POST http://localhost:8081/createUser
+Content-Type: application/json
 
-id = 99 &
-content = new-element
+{
+  "name": "leemuzi",
+  "age": 26
+}
 
 ###
 GET http://localhost:8081/getUser?id=1
